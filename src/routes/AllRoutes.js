@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { Card, CartCard } from '../components';
 import { CartDetail, CartList } from '../pages';
 
 export const AllRoutes = () => {

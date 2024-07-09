@@ -1,11 +1,13 @@
 import Image1 from '../asset/images/sample1.jpg';
 import Image2 from "../asset/images/sample2.jpg";
-import Image3 from "../asset/images/sample3.jpg";
+import { useTitle } from '../hooks/useTitle';
 
 import { CartCard } from '../components';
 
 
 export const CartDetail = () => {
+  useTitle('Cart');
+
   return (
     <main className='h-screen m-auto'>
       <section>

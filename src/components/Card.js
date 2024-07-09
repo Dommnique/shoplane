@@ -1,7 +1,7 @@
 export const Card = ({image, item, price}) => {
   return (
     <div className='max-w-96 py-4 px-3 border border-1 shadow-md rounded-md mb-5'>
-      <img src={image} alt="Product1 image" className='rounded' />
+      <img src={image} alt="Product1" className='rounded' />
       <h1 className='my-5 text-xl font-medium'>{item}</h1>
       <div className='flex justify-between'>
         <p className='font-bold text-xl'>{price}</p>

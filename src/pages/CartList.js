@@ -4,9 +4,12 @@ import Image3 from '../asset/images/sample3.jpg';
 import Image4 from '../asset/images/sample4.jpg';
 import Image5 from '../asset/images/sample5.jpg';
 import Image6 from '../asset/images/sample6.jpg';
-import { Card } from '../components'
+import { Card } from '../components';
+import { useTitle } from '../hooks/useTitle';
 
 export const CartList = () => {
+  useTitle('Home')
+
   return (
     <main>
       <section className="py-4">
