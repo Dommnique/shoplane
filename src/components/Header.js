@@ -1,7 +1,9 @@
 import Logo from "../asset/images/sampleicon.png";
 import { Link, NavLink } from 'react-router-dom';
+import { useCart } from "../context/CartContext";
 
 export const Header = () => {
+  const {cartList } = useCart();
   const activeClass = "text-lg py-1.5 pr-3 pl-3 text-black bg-slate-100 rounded";
   const inActiveClass = "text-lg py-1.5 pr-2 pl-2 text-black rounded";
 
@@ -26,7 +28,7 @@ export const Header = () => {
           </div> 
 
           <div>
-            <p className="text-black text-md font-medium text-lg ">Cart: 2</p>
+            <p className="text-black text-md font-medium text-lg ">Cart: {cartList.length}</p>
           </div>
 
         </div>

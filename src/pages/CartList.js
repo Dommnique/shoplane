@@ -8,18 +8,24 @@ import { Card } from '../components';
 import { useTitle } from '../hooks/useTitle';
 
 export const CartList = () => {
-  useTitle('Home')
+  useTitle('Home');
+
+  const Products = [
+    {id: 1, item: "Sneakers 2019", price: 150, image: `${Image1}`},
+    {id: 2, item: "Sneakers 2020", price: 350, image: `${Image2}`},
+    {id: 3, item: "Sneakers 2021", price: 150, image: `${Image3}`},
+    {id: 4, item: "Sneakers 2022", price: 130, image: `${Image4}`},
+    {id: 5, item: "Sneakers 2023", price: 450, image: `${Image5}`},
+    {id: 6, item: "Sneakers 2024", price: 50, image: `${Image6}`}
+  ]
 
   return (
     <main>
       <section className="py-4">
         <div className='flex justify-between max-xm:justify-center flex-wrap pt-9'>
-          <Card image={Image1} item="Sneakers 2019" price="$150"/>
-          <Card image={Image2} item="Sneakers 2020" price="$350"/>
-          <Card image={Image3} item="Sneakers 2021" price="$100"/>
-          <Card image={Image4} item="Sneakers 2022" price="$130"/>
-          <Card image={Image5} item="Sneakers 2023" price="$450"/>
-          <Card image={Image6} item="Sneakers 2024" price="$50"/>
+          {Products.map((product) => (
+            <Card key={product.id} product={product}/>
+          ))}
         </div>
       </section>
     </main>
